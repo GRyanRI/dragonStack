@@ -19,7 +19,7 @@ class Generation {
         return new Date(Date.now() + msUntilExpiration);
       }
     
-      newDragon({ accountId }) {
+      newDragon() {
         if (Date.now() > this.expiration) {
           throw new Error(`This generation expired on ${this.expiration}`);
         }
